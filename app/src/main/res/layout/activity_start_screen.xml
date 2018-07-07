@@ -1,0 +1,156 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.kms.kiran_c.Start_screen"
+    android:background="@drawable/back">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:background="@drawable/back"
+        android:layout_gravity="top"
+        android:autoText="false" />
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="bottom">
+
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dd5152"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_gravity="center|bottom"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dd5152"
+                android:weightSum="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_weight="0.4"
+                android:gravity="bottom">
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom">
+
+                    <WebView
+                        android:layout_width="fill_parent"
+                        android:layout_height="300dp"
+                        android:id="@+id/webView"
+                        android:background="#00ffffff"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignParentEnd="false"
+                        android:layout_alignParentBottom="true"></WebView>
+
+                    <Button
+                        android:id="@+id/Start"
+                        style="?metaButtonBarButtonStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#ffffff"
+                        android:background="#00ffffff"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textSize="30dp"
+                        android:layout_weight="0.5"
+                        android:textAlignment="textEnd"
+                        android:paddingRight="10dp"
+                        android:layout_alignTop="@+id/webView"></Button>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="You Take Care Of Your Goal&apos;s \n Are Goal Is to Take Care Of Your Health "
+                    android:id="@+id/textView4"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:paddingTop="10dp"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView5"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal|right"
+                    android:textColor="#ffffff"
+                    android:text="By VRKMS"
+                    android:paddingRight="5dp"
+                    android:textIsSelectable="false"
+                    android:textSize="23dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"></LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wc"
+                    android:id="@+id/textView"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp"
+                    android:textAlignment="center"
+                    android:textIsSelectable="false"
+                    android:textStyle="bold|normal"
+                    android:linksClickable="false"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</FrameLayout>

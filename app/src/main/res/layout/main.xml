@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.kms.kiran_c.BluetoothDemo"
+    style="@style/AppTheme.PopupOverlay"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <include layout="@layout/content_main" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:paddingBottom="30dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:background="#00ffffff"
+                android:textColor="#ffffff"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableTintMode="src_atop" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Paired devices"
+                    android:id="@+id/textView2"
+                    android:textSize="14dp"
+                    android:background="#44d8d5d5" />
+
+                <ListView
+                    android:id="@+id/listViewPaired"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1.12">
+
+                </ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="new devices"
+                    android:id="@+id/textView3"
+                    android:textSize="14dp"
+                    android:background="#44d8d5d5" />
+
+                <ListView
+                    android:id="@+id/listViewDetected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="181dp">
+
+                </ListView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="465dp"
+                android:layout_height="wrap_content"
+                android:text="next"
+                android:onClick="onSignUpClick"
+                android:background="#00ffffff"
+                android:textColor="#ffffff"
+                android:layout_weight="0.5"
+                android:layout_gravity="center_horizontal|right"
+                android:textAlignment="textEnd"
+                android:padding="20dp" />
+
+            <Button
+                android:id="@+id/buttonOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RESTART"
+                android:background="#00ffffff"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
